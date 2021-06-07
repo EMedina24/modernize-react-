@@ -12,7 +12,7 @@ const Header =()=>{
     <div class="header" id="homeowner-header">
        <div class="container  ">
           <div class="header__desktop hidden-xs hidden-sm">
-             <a href="/" class="header__logo  logo " aria-label="Modernize"></a>
+             <a href="/" class=" ml-10 header__logo  logo " aria-label="Modernize"></a>
              <div class="header__links">
                 <div class="header__link static" data-toggle="modal" data-target="#how-it-works-modal">
                    How it works
@@ -21,7 +21,7 @@ const Header =()=>{
                    <div class="header__link-title">
                       Plan Your Project
                    </div>
-                   <div class="header__link-dropdown header__link-dropdown--trades-list" style="display: none;">
+                   <div class="header__link-dropdown header__link-dropdown--trades-list" style={{display: "none"}}>
                       <div class="sub-nav__container sub-nav__container--trades-list">
                          <div class="sub-nav__trade-links">
                             <a href="/bathroom-remodel" class="sub-nav__trade-links-link">
