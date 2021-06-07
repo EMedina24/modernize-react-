@@ -1,5 +1,6 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
+import Hero from "../components/hero"
 
 
 import Layout from "../components/layout"
@@ -13,7 +14,7 @@ const BlogIndex = ({ data, location }) => {
     return (
       <Layout location={location} title={siteTitle}>
         <Seo title="All posts" />
-       
+        <Hero/>
        
       </Layout>
     )
@@ -22,7 +23,7 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <Seo title="All posts" />
-      
+      <Hero/>
     </Layout>
   )
 }

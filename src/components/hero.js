@@ -1,6 +1,6 @@
 import { Link } from 'gatsby';
 import React, { useEffect } from 'react';
-
+import NavCard from "../components/navCard"
 
 
 
