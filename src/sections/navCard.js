@@ -1,5 +1,6 @@
 import { Link } from 'gatsby';
 import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
 
 
 
@@ -230,5 +231,9 @@ const NavCard =()=>{
 
     );
     }
+
+    NavCard.propTypes = {
+      contentModuleId : PropTypes.string.isRequired
+  }
 
     export default NavCard;

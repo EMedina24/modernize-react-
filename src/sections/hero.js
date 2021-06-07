@@ -1,16 +1,34 @@
 import { Link } from 'gatsby';
 import React, { useEffect } from 'react';
-import NavCard from "../components/navCard"
+import { useStaticQuery, graphql } from 'gatsby';
+import PropTypes from 'prop-types';
+
+const data = graphql`
+       query($slug: String!) {
+        allContentfulLayoutHero(filter: {slug: {eq: $slug}}) {
+    edges {
+      node {
+        heading
+      }
+    }
+  }
+    }
+             
+    `;
 
 
 
+const Hero =({ contentModuleId ,data})=>{
 
 
 
-const Hero =()=>{
+console.log(data)
+
+
+
     return(
       
-
+<>
 <div class="home-hero">
 	<div class="home-hero__bg trending" id="hero-bg">
 		<img data-img="interior" class="fade-out desktop-img lazyloaded" src="https://modernize.com/wp-content/themes/modernize/dist/images/home/hero-interior-desktop.jpg" alt="" data-lazy-src="https://modernize.com/wp-content/themes/modernize/dist/images/home/hero-interior-desktop.jpg" data-was-processed="true"/><noscript><img data-img="interior" class="fade-out desktop-img" src="https://modernize.com/wp-content/themes/modernize/dist/images/home/hero-interior-desktop.jpg" alt="" /></noscript>
@@ -34,9 +52,16 @@ const Hero =()=>{
 		</div>
 	</div>
 </div>
-       
+       </>
     
     );
-    }
 
+    };
+
+
+
+Hero.propTypes = {
+    contentModuleId : PropTypes.string.isRequired
+}
+	
     export default Hero;

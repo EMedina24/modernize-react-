@@ -1,5 +1,6 @@
 import { Link } from 'gatsby';
 import React, { useEffect } from 'react';
+import PropTypes from 'prop-types'; 
 
 
 
@@ -7,7 +8,7 @@ import React, { useEffect } from 'react';
 
 
 
-const HiwCard=()=>{
+const HiwCard=({ contentModuleId })=>{
 
 
 
@@ -74,5 +75,10 @@ const HiwCard=()=>{
 </>
     );
     }
+
+    HiwCard.propTypes = {
+		contentModuleId : PropTypes.string.isRequired
+	}
+	
 
     export default HiwCard;
